@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component classname="com.example.binary.follow.me.BinaryFollowMeImpl" name="BinaryFollowMe">
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.light.DimmerLight" field="dimmerLights">
+      <callback method="bindBinaryLight" type="bind"/>
+      <callback method="unbindBinaryLight" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.light.Photometer" field="PhotoMeters">
+      <callback method="bindPresenceSensor" type="bind"/>
+      <callback method="unbindPresenceSensor" type="unbind"/>
+    </requires>
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+    <properties/>
+  </component>
+  <instance component="BinaryFollowMe" name="my.first.follow.me"/>
+</ipojo>
