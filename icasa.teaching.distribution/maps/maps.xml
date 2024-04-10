@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<list>
+<map>
+<string name="name">projet</string>
+<string name="imgFile">projet.png</string>
+<string name="description">projet</string>
+<string name="libs">default</string>
+<string name="gatewayURL">http://localhost:9080</string>
+<string name="id">projet</string>
+</map>
+<map>
+<string name="name">House</string>
+<string name="imgFile">house.png</string>
+<string name="description">Default House</string>
+<string name="libs">default</string>
+<string name="gatewayURL">http://localhost:9000</string>
+<string name="id">default</string>
+</map>
+</list>

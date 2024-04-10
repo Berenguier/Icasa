@@ -1,0 +1,3 @@
+<behavior factor="0">
+	<modify-zone-variable zoneId="cuisine" variable="Illuminance" value="5000.0" />
+</behavior>

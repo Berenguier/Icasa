@@ -1,0 +1,2 @@
+01:34:20.645 11483536 [vert.x-eventloop-thread-0] INFO  o.w.f.vertx.WebSocketHandler - Web Socket closed org.vertx.java.core.http.impl.DefaultServerWebSocket@374f9fb2, /icasa/websocket/event
+01:34:24.526 11487417 [vert.x-eventloop-thread-0] INFO  o.w.f.vertx.WisdomVertxServer - Removing web socket on /icasa/websocket/event bound to /icasa/websocket/event

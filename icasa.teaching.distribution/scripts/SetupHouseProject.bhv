@@ -1,0 +1,183 @@
+<behavior factor="1">
+
+	<!-- Zone Section -->
+
+	<create-zone  id ="elevage" leftX ="450" topY ="453" bottomZ ="0" X-Length ="252" Y-Length ="217" Z-Length ="179"/>
+	<add-zone-variable zoneId="elevage" variable="Temperature" />
+	<modify-zone-variable zoneId="elevage" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="elevage" variable="Area" />
+	<modify-zone-variable zoneId="elevage" variable="Area" value="10.718064730297101" />
+	<add-zone-variable zoneId="elevage" variable="Electricity" />
+	<modify-zone-variable zoneId="elevage" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="elevage" variable="Volume" />
+	<modify-zone-variable zoneId="elevage" variable="Volume" value="26.85947066387243" />
+	<add-zone-variable zoneId="elevage" variable="Illuminance" />
+	<modify-zone-variable zoneId="elevage" variable="Illuminance" value="700.0" />
+
+	<create-zone  id ="toilettes" leftX ="798" topY ="277" bottomZ ="0" X-Length ="118" Y-Length ="74" Z-Length ="179"/>
+	<add-zone-variable zoneId="toilettes" variable="Temperature" />
+	<modify-zone-variable zoneId="toilettes" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="toilettes" variable="Area" />
+	<modify-zone-variable zoneId="toilettes" variable="Area" value="1.7114720941810617" />
+	<add-zone-variable zoneId="toilettes" variable="Electricity" />
+	<modify-zone-variable zoneId="toilettes" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="toilettes" variable="Volume" />
+	<modify-zone-variable zoneId="toilettes" variable="Volume" value="4.288949139833968" />
+	<add-zone-variable zoneId="toilettes" variable="Illuminance" />
+	<modify-zone-variable zoneId="toilettes" variable="Illuminance" value="700.0" />
+
+	<create-zone  id ="couloir" leftX ="450" topY ="372" bottomZ ="0" X-Length ="341" Y-Length ="69" Z-Length ="179"/>
+	<add-zone-variable zoneId="couloir" variable="Temperature" />
+	<modify-zone-variable zoneId="couloir" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="couloir" variable="Area" />
+	<modify-zone-variable zoneId="couloir" variable="Area" value="4.6116842600259815" />
+	<add-zone-variable zoneId="couloir" variable="Electricity" />
+	<modify-zone-variable zoneId="couloir" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="couloir" variable="Volume" />
+	<modify-zone-variable zoneId="couloir" variable="Volume" value="11.556880949139082" />
+	<add-zone-variable zoneId="couloir" variable="Illuminance" />
+	<modify-zone-variable zoneId="couloir" variable="Illuminance" value="700.0" />
+
+	<create-zone  id ="cuisine" leftX ="34" topY ="457" bottomZ ="0" X-Length ="203" Y-Length ="219" Z-Length ="179"/>
+	<add-zone-variable zoneId="cuisine" variable="Temperature" />
+	<modify-zone-variable zoneId="cuisine" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="cuisine" variable="Area" />
+	<modify-zone-variable zoneId="cuisine" variable="Area" value="8.713571980026245" />
+	<add-zone-variable zoneId="cuisine" variable="Electricity" />
+	<modify-zone-variable zoneId="cuisine" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="cuisine" variable="Volume" />
+	<modify-zone-variable zoneId="cuisine" variable="Volume" value="21.8362117475818" />
+	<add-zone-variable zoneId="cuisine" variable="Illuminance" />
+	<modify-zone-variable zoneId="cuisine" variable="Illuminance" value="700.0" />
+
+	<create-zone  id ="entree" leftX ="87" topY ="297" bottomZ ="0" X-Length ="348" Y-Length ="143" Z-Length ="179"/>
+	<add-zone-variable zoneId="entree" variable="Temperature" />
+	<modify-zone-variable zoneId="entree" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="entree" variable="Area" />
+	<modify-zone-variable zoneId="entree" variable="Area" value="9.753744890647909" />
+	<add-zone-variable zoneId="entree" variable="Electricity" />
+	<modify-zone-variable zoneId="entree" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="entree" variable="Volume" />
+	<modify-zone-variable zoneId="entree" variable="Volume" value="24.442885105247083" />
+	<add-zone-variable zoneId="entree" variable="Illuminance" />
+	<modify-zone-variable zoneId="entree" variable="Illuminance" value="700.0" />
+
+	<create-zone  id ="salle de bain" leftX ="707" topY ="132" bottomZ ="0" X-Length ="167" Y-Length ="133" Z-Length ="179"/>
+	<add-zone-variable zoneId="salle de bain" variable="Temperature" />
+	<modify-zone-variable zoneId="salle de bain" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="salle de bain" variable="Area" />
+	<modify-zone-variable zoneId="salle de bain" variable="Area" value="4.3533563620510165" />
+	<add-zone-variable zoneId="salle de bain" variable="Electricity" />
+	<modify-zone-variable zoneId="salle de bain" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="salle de bain" variable="Volume" />
+	<modify-zone-variable zoneId="salle de bain" variable="Volume" value="10.90951122597395" />
+	<add-zone-variable zoneId="salle de bain" variable="Illuminance" />
+	<modify-zone-variable zoneId="salle de bain" variable="Illuminance" value="700.0" />
+
+	<create-zone  id ="salle a manger" leftX ="276" topY ="448" bottomZ ="0" X-Length ="157" Y-Length ="226" Z-Length ="179"/>
+	<add-zone-variable zoneId="salle a manger" variable="Temperature" />
+	<modify-zone-variable zoneId="salle a manger" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="salle a manger" variable="Area" />
+	<modify-zone-variable zoneId="salle a manger" variable="Area" value="6.954471930625914" />
+	<add-zone-variable zoneId="salle a manger" variable="Electricity" />
+	<modify-zone-variable zoneId="salle a manger" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="salle a manger" variable="Volume" />
+	<modify-zone-variable zoneId="salle a manger" variable="Volume" value="17.427906949969795" />
+	<add-zone-variable zoneId="salle a manger" variable="Illuminance" />
+	<modify-zone-variable zoneId="salle a manger" variable="Illuminance" value="700.0" />
+
+	<create-zone  id ="chambre" leftX ="450" topY ="138" bottomZ ="0" X-Length ="227" Y-Length ="220" Z-Length ="179"/>
+	<add-zone-variable zoneId="chambre" variable="Temperature" />
+	<modify-zone-variable zoneId="chambre" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="chambre" variable="Area" />
+	<modify-zone-variable zoneId="chambre" variable="Area" value="9.788241167316471" />
+	<add-zone-variable zoneId="chambre" variable="Electricity" />
+	<modify-zone-variable zoneId="chambre" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="chambre" variable="Volume" />
+	<modify-zone-variable zoneId="chambre" variable="Volume" value="24.52933277602602" />
+	<add-zone-variable zoneId="chambre" variable="Illuminance" />
+	<modify-zone-variable zoneId="chambre" variable="Illuminance" value="700.0" />
+
+	<create-zone  id ="chambre2" leftX ="711" topY ="454" bottomZ ="0" X-Length ="214" Y-Length ="218" Z-Length ="179"/>
+	<add-zone-variable zoneId="chambre2" variable="Temperature" />
+	<modify-zone-variable zoneId="chambre2" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="chambre2" variable="Area" />
+	<modify-zone-variable zoneId="chambre2" variable="Area" value="9.143792294319155" />
+	<add-zone-variable zoneId="chambre2" variable="Electricity" />
+	<modify-zone-variable zoneId="chambre2" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="chambre2" variable="Volume" />
+	<modify-zone-variable zoneId="chambre2" variable="Volume" value="22.914343873252598" />
+	<add-zone-variable zoneId="chambre2" variable="Illuminance" />
+	<modify-zone-variable zoneId="chambre2" variable="Illuminance" value="700.0" />
+
+	<create-zone  id ="salon" leftX ="95" topY ="144" bottomZ ="0" X-Length ="339" Y-Length ="146" Z-Length ="179"/>
+	<add-zone-variable zoneId="salon" variable="Temperature" />
+	<modify-zone-variable zoneId="salon" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="salon" variable="Area" />
+	<modify-zone-variable zoneId="salon" variable="Area" value="9.70082529866795" />
+	<add-zone-variable zoneId="salon" variable="Electricity" />
+	<modify-zone-variable zoneId="salon" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="salon" variable="Volume" />
+	<modify-zone-variable zoneId="salon" variable="Volume" value="24.310268605524715" />
+	<add-zone-variable zoneId="salon" variable="Illuminance" />
+	<modify-zone-variable zoneId="salon" variable="Illuminance" value="700.0" />
+
+	<!-- Device Section -->
+
+	<create-device id="DimmerLight-4d245ac897" type="iCasa.DimmerLight" />
+	<move-device-zone deviceId="DimmerLight-4d245ac897" zoneId="salon" />
+
+	<create-device id="DimmerLight-a9af806b24" type="iCasa.DimmerLight" />
+	<move-device-zone deviceId="DimmerLight-a9af806b24" zoneId="chambre" />
+
+	<create-device id="Photometer-46d653a86f" type="iCasa.Photometer" />
+	<move-device-zone deviceId="Photometer-46d653a86f" zoneId="chambre2" />
+
+	<create-device id="DimmerLight-d7d82aadaf" type="iCasa.DimmerLight" />
+	<move-device-zone deviceId="DimmerLight-d7d82aadaf" zoneId="couloir" />
+
+	<create-device id="DimmerLight-9af384b4c2" type="iCasa.DimmerLight" />
+	<move-device-zone deviceId="DimmerLight-9af384b4c2" zoneId="salle a manger" />
+
+	<create-device id="DimmerLight-8fe68616dc" type="iCasa.DimmerLight" />
+	<move-device-zone deviceId="DimmerLight-8fe68616dc" zoneId="toilettes" />
+
+	<create-device id="Photometer-aa5665bbac" type="iCasa.Photometer" />
+
+	<create-device id="Photometer-2f0fe6f785" type="iCasa.Photometer" />
+	<move-device-zone deviceId="Photometer-2f0fe6f785" zoneId="couloir" />
+
+	<create-device id="Photometer-52ed78c60f" type="iCasa.Photometer" />
+	<move-device-zone deviceId="Photometer-52ed78c60f" zoneId="salon" />
+
+	<create-device id="Photometer-ad140e37d2" type="iCasa.Photometer" />
+	<move-device-zone deviceId="Photometer-ad140e37d2" zoneId="cuisine" />
+
+	<create-device id="Photometer-cafd302021" type="iCasa.Photometer" />
+	<move-device-zone deviceId="Photometer-cafd302021" zoneId="toilettes" />
+
+	<create-device id="Photometer-498d3f83f5" type="iCasa.Photometer" />
+	<move-device-zone deviceId="Photometer-498d3f83f5" zoneId="salle a manger" />
+
+	<create-device id="DimmerLight-31fa76c419" type="iCasa.DimmerLight" />
+	<move-device-zone deviceId="DimmerLight-31fa76c419" zoneId="cuisine" />
+
+	<create-device id="DimmerLight-7b45b2b946" type="iCasa.DimmerLight" />
+	<move-device-zone deviceId="DimmerLight-7b45b2b946" zoneId="salle de bain" />
+
+	<create-device id="Photometer-246f3814aa" type="iCasa.Photometer" />
+	<move-device-zone deviceId="Photometer-246f3814aa" zoneId="chambre" />
+
+	<create-device id="DimmerLight-a482fe4a84" type="iCasa.DimmerLight" />
+	<move-device-zone deviceId="DimmerLight-a482fe4a84" zoneId="entree" />
+
+	<create-device id="Photometer-20a2a3fb70" type="iCasa.Photometer" />
+	<move-device-zone deviceId="Photometer-20a2a3fb70" zoneId="entree" />
+
+	<create-device id="DimmerLight-84dfc46bf2" type="iCasa.DimmerLight" />
+	<move-device-zone deviceId="DimmerLight-84dfc46bf2" zoneId="chambre2" />
+
+
+	<!-- Person Section -->
+
+</behavior>
