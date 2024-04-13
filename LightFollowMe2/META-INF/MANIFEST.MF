@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: LightFollowMe2
 Bundle-SymbolicName: LightFollowMe2
 Bundle-Version: 1.0.0.qualifier
-Export-Package: com.example.binary.follow.me
+Export-Package: com.example.binary.follow.me,org.example.time
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Created-By: iPOJO 1.12.1
 Import-Package: fr.liglab.adele.icasa, fr.liglab.adele.icasa.access, fr.
@@ -43,42 +43,76 @@ Import-Package: fr.liglab.adele.icasa, fr.liglab.adele.icasa.access, fr.
  , org.json, org.osgi.service.cm;version=1.2, org.osgi.service.log;versi
  on=1.3
 iPOJO-Components: instance { $component="BinaryFollowMe" $name="my.first
- .follow.me" }component { $classname="com.example.binary.follow.me.Binar
- yFollowMeImpl" $name="BinaryFollowMe" requires { $aggregate="true" $opt
- ional="true" $specification="fr.liglab.adele.icasa.device.light.DimmerL
- ight" $field="dimmerLights" callback { $method="bindBinaryLight" $type=
- "bind" }callback { $method="unbindBinaryLight" $type="unbind" }}require
- s { $aggregate="true" $optional="true" $specification="fr.liglab.adele.
- icasa.device.light.Photometer" $field="PhotoMeters" callback { $method=
- "bindPresenceSensor" $type="bind" }callback { $method="unbindPresenceSe
- nsor" $type="unbind" }}callback { $method="start" $transition="validate
- " }callback { $method="stop" $transition="invalidate" }properties { }ma
- nipulation { $classname="com.example.binary.follow.me.BinaryFollowMeImp
- l" interface { $name="fr.liglab.adele.icasa.device.DeviceListener" }fie
- ld { $name="PhotoMeters" $type="fr.liglab.adele.icasa.device.light.Phot
- ometer[]" }field { $name="dimmerLights" $type="fr.liglab.adele.icasa.de
- vice.light.DimmerLight[]" }method { $name="bindBinaryLight" $arguments=
- "{fr.liglab.adele.icasa.device.light.DimmerLight,java.util.Map}" $names
- ="{dimmerLight,properties}" }method { $name="unbindBinaryLight" $argume
- nts="{fr.liglab.adele.icasa.device.light.DimmerLight,java.util.Map}" $n
- ames="{dimmerLight,properties}" }method { $name="bindPresenceSensor" $a
- rguments="{fr.liglab.adele.icasa.device.light.Photometer,java.util.Map}
- " $names="{photoMeter,properties}" }method { $name="unbindPresenceSenso
- r" $arguments="{fr.liglab.adele.icasa.device.light.Photometer,java.util
- .Map}" $names="{photoMeter,properties}" }method { $name="stop" }method 
- { $name="start" }method { $name="deviceAdded" $arguments="{fr.liglab.ad
- ele.icasa.device.GenericDevice}" $names="{arg0}" }method { $name="devic
- eEvent" $arguments="{fr.liglab.adele.icasa.device.GenericDevice,java.la
- ng.Object}" $names="{arg0,arg1}" }method { $name="devicePropertyAdded" 
- $arguments="{fr.liglab.adele.icasa.device.GenericDevice,java.lang.Strin
- g}" $names="{arg0,arg1}" }method { $name="devicePropertyModified" $argu
- ments="{fr.liglab.adele.icasa.device.GenericDevice,java.lang.String,jav
- a.lang.Object,java.lang.Object}" $names="{device,propertyName,oldValue,
- newValue}" }method { $name="devicePropertyRemoved" $arguments="{fr.ligl
- ab.adele.icasa.device.GenericDevice,java.lang.String}" $names="{arg0,ar
- g1}" }method { $name="deviceRemoved" $arguments="{fr.liglab.adele.icasa
- .device.GenericDevice}" $names="{arg0}" }method { $name="getBinaryLight
- FromLocation" $return="java.util.List" $arguments="{java.lang.String}" 
- $names="{location}" }method { $name="setLightIntensity" $arguments="{ja
- va.lang.String,double}" $names="{serialNumber,intensity}" }}}
+ .follow.me" }instance { $component="MomentOfTheDay" $name="MomentOfTheD
+ ay-1" }component { $classname="com.example.binary.follow.me.BinaryFollo
+ wMeImpl" $name="BinaryFollowMe" requires { $aggregate="true" $optional=
+ "true" $specification="fr.liglab.adele.icasa.device.light.DimmerLight" 
+ $field="dimmerLights" callback { $method="bindBinaryLight" $type="bind"
+  }callback { $method="unbindBinaryLight" $type="unbind" }}requires { $a
+ ggregate="true" $optional="true" $specification="fr.liglab.adele.icasa.
+ device.light.Photometer" $field="PhotoMeters" callback { $method="bindP
+ resenceSensor" $type="bind" }callback { $method="unbindPresenceSensor" 
+ $type="unbind" }}callback { $method="start" $transition="validate" }cal
+ lback { $method="stop" $transition="invalidate" }properties { }provides
+  { $specifications="org.example.time.MomentOfTheDayService" }provides {
+  $specifications="org.example.time.MomentOfTheDayListener" }provides { 
+ $specifications="fr.liglab.adele.icasa.service.scheduler.PeriodicRunnab
+ le" }manipulation { $classname="com.example.binary.follow.me.BinaryFoll
+ owMeImpl" interface { $name="fr.liglab.adele.icasa.device.DeviceListene
+ r" }interface { $name="fr.liglab.adele.icasa.service.scheduler.Periodic
+ Runnable" }field { $name="PhotoMeters" $type="fr.liglab.adele.icasa.dev
+ ice.light.Photometer[]" }field { $name="currentSeconds" $type="int" }fi
+ eld { $name="currentTime" $type="java.time.LocalDateTime" }field { $nam
+ e="dimmerLights" $type="fr.liglab.adele.icasa.device.light.DimmerLight[
+ ]" }field { $name="initialise" $type="boolean" }field { $name="journee"
+  $type="boolean" }field { $name="momentOfTheDayListener" $type="org.exa
+ mple.time.MomentOfTheDayListener" }field { $name="valeurPreJour" $type=
+ "boolean" }method { $name="setMomentOfTheDayListener" $arguments="{org.
+ example.time.MomentOfTheDayListener}" $names="{listener}" }method { $na
+ me="bindBinaryLight" $arguments="{fr.liglab.adele.icasa.device.light.Di
+ mmerLight,java.util.Map}" $names="{dimmerLight,properties}" }method { $
+ name="unbindBinaryLight" $arguments="{fr.liglab.adele.icasa.device.ligh
+ t.DimmerLight,java.util.Map}" $names="{dimmerLight,properties}" }method
+  { $name="bindPresenceSensor" $arguments="{fr.liglab.adele.icasa.device
+ .light.Photometer,java.util.Map}" $names="{photoMeter,properties}" }met
+ hod { $name="unbindPresenceSensor" $arguments="{fr.liglab.adele.icasa.d
+ evice.light.Photometer,java.util.Map}" $names="{photoMeter,properties}"
+  }method { $name="stop" }method { $name="start" }method { $name="device
+ Added" $arguments="{fr.liglab.adele.icasa.device.GenericDevice}" $names
+ ="{arg0}" }method { $name="deviceEvent" $arguments="{fr.liglab.adele.ic
+ asa.device.GenericDevice,java.lang.Object}" $names="{arg0,arg1}" }metho
+ d { $name="devicePropertyAdded" $arguments="{fr.liglab.adele.icasa.devi
+ ce.GenericDevice,java.lang.String}" $names="{arg0,arg1}" }method { $nam
+ e="devicePropertyModified" $arguments="{fr.liglab.adele.icasa.device.Ge
+ nericDevice,java.lang.String,java.lang.Object,java.lang.Object}" $names
+ ="{device,propertyName,oldValue,newValue}" }method { $name="devicePrope
+ rtyRemoved" $arguments="{fr.liglab.adele.icasa.device.GenericDevice,jav
+ a.lang.String}" $names="{arg0,arg1}" }method { $name="deviceRemoved" $a
+ rguments="{fr.liglab.adele.icasa.device.GenericDevice}" $names="{arg0}"
+  }method { $name="getBinaryLightFromLocation" $return="java.util.List" 
+ $arguments="{java.lang.String}" $names="{location}" }method { $name="ch
+ eckPhotometers" }method { $name="run" }method { $name="getPeriod" $retu
+ rn="long" }method { $name="getUnit" $return="java.util.concurrent.TimeU
+ nit" }}}component { $classname="org.example.time.MomentOfTheDayImpl" $n
+ ame="MomentOfTheDay" provides { $specifications="org.example.time.Momen
+ tOfTheDayService" }provides { $specifications="fr.liglab.adele.icasa.se
+ rvice.scheduler.PeriodicRunnable" }provides { $specifications="fr.ligla
+ b.adele.icasa.device.light.DimmerLight" }manipulation { $classname="org
+ .example.time.MomentOfTheDayImpl" interface { $name="org.example.time.M
+ omentOfTheDayService" }interface { $name="fr.liglab.adele.icasa.service
+ .scheduler.PeriodicRunnable" }field { $name="PhotoMeters" $type="fr.lig
+ lab.adele.icasa.device.light.Photometer[]" }field { $name="currentMomen
+ tOfTheDay" $type="org.example.time.MomentOfTheDay" }field { $name="curr
+ entSeconds" $type="int" }field { $name="currentTime" $type="java.time.L
+ ocalDateTime" }field { $name="dimmerLights" $type="fr.liglab.adele.icas
+ a.device.light.DimmerLight[]" }field { $name="listeners" $type="java.ut
+ il.List" }method { $name="notifyMomentOfTheDayChange" $arguments="{bool
+ ean}" $names="{jour}" }method { $name="getMomentOfTheDay" $return="org.
+ example.time.MomentOfTheDay" }method { $name="getPeriod" $return="long"
+  }method { $name="getUnit" $return="java.util.concurrent.TimeUnit" }met
+ hod { $name="register" $arguments="{org.example.time.MomentOfTheDayList
+ ener}" $names="{listener}" }method { $name="unregister" $arguments="{or
+ g.example.time.MomentOfTheDayListener}" $names="{listener}" }method { $
+ name="getBinaryLightFromLocation" $return="java.util.List" $arguments="
+ {java.lang.String}" $names="{location}" }method { $name="run" }}}
 

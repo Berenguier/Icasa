@@ -12,6 +12,15 @@
     <callback method="start" transition="validate"/>
     <callback method="stop" transition="invalidate"/>
     <properties/>
+    <provides specifications="org.example.time.MomentOfTheDayService"/>
+    <provides specifications="org.example.time.MomentOfTheDayListener"/>
+    <provides specifications="fr.liglab.adele.icasa.service.scheduler.PeriodicRunnable"/>
   </component>
   <instance component="BinaryFollowMe" name="my.first.follow.me"/>
+  <component classname="org.example.time.MomentOfTheDayImpl" name="MomentOfTheDay">
+    <provides specifications="org.example.time.MomentOfTheDayService"/>
+    <provides specifications="fr.liglab.adele.icasa.service.scheduler.PeriodicRunnable"/>
+    <provides specifications="fr.liglab.adele.icasa.device.light.DimmerLight"/>
+  </component>
+  <instance component="MomentOfTheDay" name="MomentOfTheDay-1"/>
 </ipojo>
